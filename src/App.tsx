@@ -1,3 +1,4 @@
+
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
 import Login from './components/Login';
@@ -12,19 +13,24 @@ import StaffRoute from './components/protected/StaffRoute';
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/login" component={Login} />
-        <Route path="/register" component={Register} />
-        <PrivateRoute path="/books" component={BookList} />
-        <PrivateRoute path="/books/:id" component={BookDetails} />
-        <StaffRoute path="/applications" component={ApplicationList} />
-        <PrivateRoute path="/applications/new" component={ApplicationForm} />
-        <PrivateRoute path="/profile" component={Profile} />
-      </Switch>
-    </Router>
+    <div>
+      <h1>WW Book Store</h1>
+      <h1>Welcome to our bookstore, please enjoy reading jeney</h1>
+        <Router>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/login" component={Login} />
+            <Route path="/register" component={Register} />
+            <PrivateRoute path="/books" component={BookList} />
+            <PrivateRoute path="/books/:id" component={BookDetails} />
+            <StaffRoute path="/applications" component={ApplicationList} />
+            <PrivateRoute path="/applications/new" component={ApplicationForm} />
+            <PrivateRoute path="/profile" component={Profile} />
+          </Switch>
+        </Router>
+    </div>
   );
 }
 
 export default App;
+
