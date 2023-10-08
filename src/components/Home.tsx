@@ -8,14 +8,14 @@ function Home() {
       <p>Explore our wide range of books and find your next great read!</p>
 
       <div>
-        <Link to="/register">
-          <button>Register</button>
+        <Link to="/BookList">
+          <button>Book List</button>
         </Link>
         <Link to="/login">
           <button>Login</button>
         </Link>
-        <Link to="/BookList">
-          <button>Book List</button>
+        <Link to="/register">
+          <button>Register</button>
         </Link>
         <Link to="/ApplicationForm">
           <button>Application Form</button>
