@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { api } from './common/http-common';
 import { Link } from 'react-router-dom';
 
 function BookList() {
@@ -9,7 +10,7 @@ function BookList() {
     // Fetch the list of books from the API
     const fetchBooks = async () => {
       try {
-        const response = await axios.get('/api/books');
+        const response = await axios.get(`${api.uri}/book`)
         setBooks(response.data);
       } catch (error) {
         console.error('Error fetching books:', error);
