@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-function ApplicationForm() {
+function EnquiryForm() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [position, setPosition] = useState('');
@@ -9,28 +9,28 @@ function ApplicationForm() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const applicationData = {
+    const enquiryData = {
       name,
       email,
       position,
     };
 
     try {
-      await axios.post('/api/applications', applicationData);
-      alert('Application submitted successfully!');
+      await axios.post('/api/enquiries', enquiryData);
+      alert('Enquiry submitted successfully!');
       // Reset the form after successful submission
       setName('');
       setEmail('');
       setPosition('');
     } catch (error) {
-      console.error('Error submitting application:', error);
-      alert('An error occurred while submitting the application. Please try again.');
+      console.error('Error submitting enquiry:', error);
+      alert('An error occurred while submitting the enquiry. Please try again.');
     }
   };
 
   return (
     <div>
-      <h2>Application Form</h2>
+      <h2>Enquiry Form</h2>
       <form onSubmit={handleSubmit}>
         <label>
           Name:
@@ -41,7 +41,7 @@ function ApplicationForm() {
           <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
         </label>
         <label>
-          Position:
+          Enquiry:
           <input type="text" value={position} onChange={(e) => setPosition(e.target.value)} required />
         </label>
         <button type="submit">Submit</button>
@@ -50,4 +50,4 @@ function ApplicationForm() {
   );
 }
 
-export default ApplicationForm;
+export default EnquiryForm;

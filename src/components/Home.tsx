@@ -17,8 +17,8 @@ function Home() {
         <Link to="/register">
           <button>Register</button>
         </Link>
-        <Link to="/ApplicationForm">
-          <button>Application Form</button>
+        <Link to="/EnquiryForm">
+          <button>Enquiry Form</button>
         </Link>
       </div>
     </div>

@@ -5,8 +5,8 @@ import Login from './components/Login';
 import Register from './components/Register';
 import BookList from './components/BookList';
 import BookDetails from './components/BookDetails';
-import ApplicationList from './components/ApplicationList';
-import ApplicationForm from './components/ApplicationForm';
+import EnquiryList from './components/EnquiryList';
+import EnquiryForm from './components/EnquiryForm';
 import Profile from './components/Profile';
 import PrivateRoute from './components/protected/PrivateRoute';
 import StaffRoute from './components/protected/StaffRoute';
@@ -24,6 +24,7 @@ export default function App() {
             <Link to="/BookList">BookList</Link>
             <Link to="/Login">Login</Link>
             <Link to="/Register">Register</Link>
+            <Link to="/EnquiryForm">EnquiryForm</Link>
           </Space>
         </nav>
       </Header>
@@ -33,6 +34,7 @@ export default function App() {
           <Route path="/bookList" element={<BookList />} />
           <Route path="/Login" element = {<Login /> } />
           <Route path="/Register" element = {<Register /> } />
+          <Route path="/EnquiryForm" element = {<EnquiryForm /> } />
         </Routes>
       </Content>
       <Footer>
